@@ -5,15 +5,18 @@ from kivy.base import runTouchApp
 
 runTouchApp(Builder.load_string("""
 GridLayout:
+    
     canvas:
         Color:
             rgb:1,0,10
         Ellipse:
-            pos:(100,100)
-            size:(100,100)
+            pos:self.pos
+            size:self.size
         Rectangle:
-            pos:(20,20)
-            size:(20,20)
+            pos:self.pos
+            size:self.size
+    
     Label:
         text:'Label1'
+        halign:'center'
 """))

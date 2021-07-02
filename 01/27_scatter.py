@@ -11,7 +11,7 @@ class Welcome(BoxLayout):
         self.orientation='vertical'
         self.s1=Scatter(pos=(200,200))
 
-        self.s1.add_widget(Label(text='Label1'))
+        self.s1.add_widget(Label(text='Label1',halign='center'))
         #self.s1.add_widget(Button(text='Button1'))
         self.add_widget(self.s1)
 
