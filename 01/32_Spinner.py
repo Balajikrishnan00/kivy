@@ -1,22 +1,18 @@
-"""
 from kivy.app import App
 from kivy.uix.spinner import Spinner
-
+from kivy.uix.label import Label
 
 
 class MyApp(App):
-
 	def build(self):
-		s=Spinner(text='Home',values=('hello',),size_hint=(.2,.1),pos_hint={'top':1})
-		s.bind(on_press=self.show_value)
-		return s
-	def show_value(self,i):
-		print('the spinner text')
-
-if __name__ == '__main__':
-	MyApp().run()
-"""
-from kivy.uix.spinner import Spinner
-
-print(dir(Spinner))
-help(halign)
+		self.s=Spinner(text='Spinner 1',
+		values=('btn1','btn2','btn3','btn4'),
+		size_hint=(.2,.1))
+		self.s.bind(on_press=self.show_Spinner)
+		return self.s
+	def show_Spinner(self,instance):
+		self.text1=self.s.text
+		print('Hello',self.text1)
+		
+		
+MyApp().run()
