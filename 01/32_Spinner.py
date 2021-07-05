@@ -12,7 +12,7 @@ class MyApp(App):
 		return self.s
 	def show_Spinner(self,instance):
 		self.text1=self.s.text
-		print('Hello',self.text1)
+		return Label(text=f'Hello {self.text1}')
 		
 		
 MyApp().run()

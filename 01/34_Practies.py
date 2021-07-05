@@ -9,7 +9,7 @@ BoxLayout:
     padding:10
     spacing:12
     TextInput:
-        
+        hint_text:'hello'
         
     TextInput:
     TextInput:
