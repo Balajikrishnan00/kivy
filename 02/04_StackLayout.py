@@ -2,9 +2,12 @@ from kivy.app import App
 from kivy.uix.stacklayout import StackLayout
 from kivy.uix.button import Button
 
+
 class MYStacklayout(App):
     def build(self):
+
         S=StackLayout()
+
         S.orientation='tb-rl'
 
         for i in range(1,11):
