@@ -1,4 +1,4 @@
-"""
+
 from kivy.app import App
 #from kivy.uix.actionbar import ActionBar,ActionView
 from kivy.lang import Builder
@@ -12,7 +12,3 @@ class MainApp(App):
         Builder.load_file('03_ActionBar.kv')
         return User_actionbar()
 MainApp().run()
-"""
-from kivy.uix.actionbar import ActionBar
-#print(dir(ActionBar))
-help(ActionBar)
