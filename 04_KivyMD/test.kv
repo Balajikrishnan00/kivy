@@ -1,0 +1,41 @@
+myBox:
+<myBox>:
+    canvas:
+        Color:
+            rgb:(1,1,1,1)
+        Rectangle:
+            size:self.size
+            pos:self.pos
+
+    Button:
+        text:'-'
+        size_hint:.2,.1
+        pos:20,20
+        background_color:1,0,0,1
+        bold:True
+        font_size:'30dp'
+        on_press:root.minus()
+    Label:
+        text:root.my_Label_Value
+        bold:True
+        font_size:'30dp'
+        size_hint:.2,.1
+        color:0,0,0,1
+    Button:
+        text:'+'
+        size_hint:.2,.1
+        font_size:'30dp'
+        background_color:0,1,0,1
+        on_press:root.plus()
+    BoxLayout:
+        orientation:'vertical'
+        ToggleButton:
+            text:'OFF'
+            size_hint_y:None
+            height:60
+            on_release:
+        Switch:
+        Slider:
+
+
+

@@ -1,5 +1,23 @@
-wel:
+myGridlayout:
 
+<myGridlayout>:
+    cols:2
+    #rows:2
+    Button:
+        text:'b1'
+        size_hint:.2,.1
+    Button:
+        text:'b2'
+
+    Button:
+        text:'b3'
+        size_hint:.2,.1
+    Button:
+        text:'b4'
+    Button:
+        text:'b5'
+    Button:
+        text:'b6'
 <Second>:
     orientation:'vertical'
     #spacing:10
@@ -48,10 +66,19 @@ wel:
         size_hint:(.2,.1)
         pos_hint:{'top':1}
 <myanchor>:
-    Button:
-        text:'Button1'
-        size_hint_y:None
-        height:30
+    back_color:(1,1,0,1)
+    padding:50
+    anchor_x:'center'
+    anchor_y:'center'
+    BoxLayout:
+        size_hint:(.2,.1)
+        Button:
+            text:'Button1'
+
+        Button:
+            text:'Button2'
+
+
 <wel>:
     Button:
         text:'B1'
@@ -73,6 +100,6 @@ wel:
     BoxLayout:
         Label:
             text:'Username'
-            
+
 
 
