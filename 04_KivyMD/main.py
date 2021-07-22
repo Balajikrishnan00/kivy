@@ -1,9 +1,9 @@
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 from kivy.properties import StringProperty,BooleanProperty
 
 
-class myBox(BoxLayout):
+class myBox(GridLayout):
     my_text = StringProperty('OFF')
     my_Label_Value = StringProperty('0')
     value = 0

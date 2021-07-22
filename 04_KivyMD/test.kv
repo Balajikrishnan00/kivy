@@ -1,19 +1,14 @@
 myBox:
 <myBox>:
-    canvas:
-        Color:
-            rgb:(1,1,1,1)
-        Rectangle:
-            size:self.size
-            pos:self.pos
+    cols:3
 
     Button:
         text:'-'
         size_hint:.2,.1
-        pos:20,20
+        #pos:20,20
         background_color:1,0,0,1
         bold:True
-        font_size:'50dp'
+        #font_size:'50dp'
         on_press:root.minus()
         disabled:not root.Toggle_Button
     Label:
@@ -30,22 +25,32 @@ myBox:
         background_color:0,1,0,1
         on_press:root.plus()
         disabled:not root.Toggle_Button
-    BoxLayout:
-        orientation:'vertical'
-        ToggleButton:
-            text:root.my_text
-            size_hint_y:None
-            height:60
-            on_state:root.on_ToggleButton(self)
-            disabled:not root.switch_Active
-        Switch:
-            on_active:root.SwitchButton(self)
-            active:True
 
 
+    ToggleButton:
+        text:root.my_text
+        size_hint_y:None
+        height:60
+        on_state:root.on_ToggleButton(self)
+        disabled:not root.switch_Active
+    Switch:
+        id:myswitch
+        on_active:root.SwitchButton(self)
+        active:False
 
 
-        Slider:
-
-
+    Slider:
+        id:slider
+        max:100
+        value:20
+        #disabled:not root.switch_Active
+        disabled:not myswitch.active
+    Label:
+        text:str(int(slider.value))
+        color:0,0,0,1
+    ProgressBar:
+        size_hint_x:.5
+        max:100
+        value:slider.value
+    TextInput:
 
