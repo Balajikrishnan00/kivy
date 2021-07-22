@@ -5,6 +5,23 @@
         #TextInput:
         TextInput:
             id:text_input
-            text:'food'
+            hint_text:'food'
+            #text:'food'
+            multiline:False
+            on_text_validate:root.ontext_validate(self)
         Label:
-            text:text_input.text
+            #font_name:''
+            text:root.textinput_text
+<myimage>:
+    cols:3
+    Image:
+        source:"D:\kivy\Boss Kivy\Images\download (1).jfif"
+        #size_hint_y:'5dp'
+        allow_stretch:True
+        keep_ratio:False
+    Image:
+        source:"D:\kivy\Boss Kivy\Images\download (1).jfif"
+        allow_stretch:True
+    Image:
+        source:"D:\kivy\Boss Kivy\Images\download (1).jfif"
+        keep_ratio:False
