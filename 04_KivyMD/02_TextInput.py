@@ -1,8 +1,14 @@
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
 from kivy.properties import StringProperty
-from kivy.uix.image import Image
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.widget import Widget
+
+
+class mycanvas(Widget):
+    pass
+
+
 
 
 class myimage(GridLayout):
@@ -17,8 +23,8 @@ class mybox(BoxLayout):
 
 
 class tesapp(App):
-    def build(self):
-        return myimage()
+    pass
+
 
 
 tesapp().run()

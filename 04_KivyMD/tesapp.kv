@@ -1,3 +1,4 @@
+mybox:
 <mybox>:
     GridLayout:
         size_hint_x:
@@ -25,3 +26,17 @@
     Image:
         source:"D:\kivy\Boss Kivy\Images\download (1).jfif"
         keep_ratio:False
+#:set s dp(150)
+<mycanvas>:
+        canvas:
+        Rectangle:
+            pos:self.center_x-75,self.center_y-260
+            size:s,s
+        Ellipse:
+            pos:100,200
+            size:dp(600),dp(70)
+        Line:
+            points:(0,0,100,100,200,0,self.width,100)
+            #points:(x,y,x2,y2)
+            width:3
+
