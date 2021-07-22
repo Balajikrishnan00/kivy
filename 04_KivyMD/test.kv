@@ -13,28 +13,37 @@ myBox:
         pos:20,20
         background_color:1,0,0,1
         bold:True
-        font_size:'30dp'
+        font_size:'50dp'
         on_press:root.minus()
+        disabled:not root.Toggle_Button
     Label:
         text:root.my_Label_Value
         bold:True
-        font_size:'30dp'
+        font_size:'60dp'
         size_hint:.2,.1
         color:0,0,0,1
+        disabled:not root.Toggle_Button
     Button:
         text:'+'
         size_hint:.2,.1
-        font_size:'30dp'
+        font_size:'50dp'
         background_color:0,1,0,1
         on_press:root.plus()
+        disabled:not root.Toggle_Button
     BoxLayout:
         orientation:'vertical'
         ToggleButton:
-            text:'OFF'
+            text:root.my_text
             size_hint_y:None
             height:60
-            on_release:
+            on_state:root.on_ToggleButton(self)
+            disabled:not root.switch_Active
         Switch:
+            on_active:root.SwitchButton(self)
+
+
+
+
         Slider:
 
 
