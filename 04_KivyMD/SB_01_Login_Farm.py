@@ -39,7 +39,11 @@ MDFloatLayout:
         text:'Login'
         pos_hint:{'center_x':.5,'center_y':.35}
         size_hint_x:.5
+        theme_text_color:'Custom'
+        text_color:1,1,1,1
+        font_style:'H5'
         on_release:app.verifying( email.text, password.text )
+        
         
         
         
