@@ -5,10 +5,8 @@ from kivymd.uix.textfield import MDTextFieldRect
 Window.size=(320,600)
 
 login="""
-
-    
-        
-    
+MDFloatLayout:
+    MD
 """
 
 

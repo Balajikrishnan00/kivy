@@ -162,6 +162,32 @@
             width:2
 <Canvas_Example4>:
     Button:
-        text:'Move'
+        text:'right'
         pos:dp(100),dp(100)
-        on_press:root.on_Button_Click()
+        size:50,50
+        on_press:root.on_Button_Right()
+    Button:
+        text:'UP'
+        pos:dp(50),dp(150)
+        size:50,50
+        on_press:root.on_Button_Up()
+    Button:
+        text:'LEFT'
+        size:(50,50)
+        pos:dp(0),dp(100)
+        on_press:root.on_Button_Left()
+    Button:
+        text:'Down'
+        size:(50,50)
+        pos:dp(50),dp(50)
+        on_press:root.on_Button_Down()
+    Label:
+
+        text:str(root.width)
+        pos:dp(300),dp(20)
+
+    Label:
+
+        text:str(root.height)
+        pos:(200,300)
+        size:(300,500)

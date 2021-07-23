@@ -34,32 +34,42 @@ class Canvas_Example4(Widget):
         super(Canvas_Example4, self).__init__(**kwargs)
 
         with self.canvas:
-            Line(points=(0,0,100,100),width=2)
-            Color(0,1,0)
-            Line(points=(200,200,300,300),width=2)
-            Line(circle=(200,300,100))
-            Line(points=(0,0,200,300))
-            Line(circle=(200,200,100,))
-            Line(rectangle=(300,300,400,200))
-            Line(ellipse=(500,200,100,80))
-            self.rec=Rectangle(pos=(300,200),size=(200,100))
-    def on_Button_Click(self):
-
+            #Line(points=(0,0,100,100),width=2)
+            #Color(0,1,0)
+            #Line(points=(200,200,300,300),width=2)
+            #Line(circle=(200,300,100))
+            #Line(points=(0,0,200,300))
+            #Line(circle=(200,200,100,))
+            #Line(rectangle=(300,300,400,200))
+            #Line(ellipse=(500,200,100,80))
+            self.rec=Rectangle(pos=(200,100),size=(50,50))
+    def on_Button_Right(self):
         print('Foo')
         x,y=self.rec.pos
-        x+=dp(10)
-        y+=dp(10)
         w,h=self.rec.size
+        inc=dp(10)
+        diff=self.width-(x+w)
+        print(self.width,x,w)
+        print(diff<inc)
+        if diff<inc:
+            inc=diff
+        x+=inc
         self.rec.pos=(x,y)
-        print(x,y)
-        print(w,h)
+    def on_Button_Up(self):
+        x, y = self.rec.pos
+        w, h = self.rec.size
+        inc=dp(10)
+        diff = self.height -(x+h)
+        if diff<inc:
+            inc=diff
+        y+=inc
+        self.rec.pos=(x,y)
 
+    def on_Button_Left(self):
+        pass
 
-
-
-
-
-
+    def on_Button_Down(self):
+        pass
 
 class Touch(Widget):
 
