@@ -8,6 +8,8 @@ from kivy.graphics import Line
 class canvas_Rectangle(Widget):
     pass
 
+class canvas_CenterLine(Widget):
+    pass
 
 class canvas_Ellipse(Widget):
     pass
@@ -48,7 +50,7 @@ class Touch(Widget):
 
 class canvasApp(App):
     def build(self):
-        return New_Line()
+        return canvas_CenterLine()
 
 
 canvasApp().run()

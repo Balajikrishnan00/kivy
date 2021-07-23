@@ -126,10 +126,22 @@
             points:(50,50,50,600,  50,600,1225,600,  1225,600,1225,50,  1225,50,50,50)
         Line:
             points:(75,75,75,580)
+        Line:
+            ellipse:(dp(150),dp(150),dp(100),dp(100))
+            width:2
     Label:
         text:'0-25'
         size:20,20
     Label:
         text:'hi'
         size:700,10
+<canvas_CenterLine>:
+    canvas:
+        Line:
+            points:(0,self.height/2, self.width,self.height/2)
+            width:2
+        Line:
+            points:(self.width/2,0, self.width/2,self.height)
+            width:2
+
 
