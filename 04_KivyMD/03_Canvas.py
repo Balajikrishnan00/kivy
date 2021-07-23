@@ -24,6 +24,9 @@ class Graph_Lines(Widget):
 class New_Line(Widget):
     pass
 
+class canvas_Example3(Widget):
+    pass
+
 class Touch(Widget):
 
     def __init__(self, **kwargs):
@@ -50,7 +53,7 @@ class Touch(Widget):
 
 class canvasApp(App):
     def build(self):
-        return canvas_CenterLine()
+        return canvas_Example3()
 
 
 canvasApp().run()
