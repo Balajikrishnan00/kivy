@@ -1,4 +1,4 @@
-
+#:set s dp(150)
 
 
 <canvas_Rectangle>
@@ -26,5 +26,101 @@
 
 <canvas_Lines>:
     canvas:
+        Color:
+            rgba:0,1,0,1
+        Rectangle:
+            pos:self.x+10,self.y+10
+            size:dp(100),dp(100)
+        Color:
+            rgba:1,0,0,1
+        Ellipse:
+
+            pos:dp(200),dp(200)
+            size:dp(100),dp(100)
+
         Line:
-            points:(0,100)
+            ellipse:(300,300,100,100)
+            #x,y,width,height
+            width:3
+        Line:
+            points:(self.center_x-s/2,self.center_y-s/2,400,400)
+        Line:
+            rectangle:(400,400,200,100)
+        Color:
+            rgba:(1,1,1,1)
+        #Line:
+        #    points:(0,0,100,300)
+        #    width:3
+        #Line:
+        #    points:(300,0,300,300)
+        #    width:2
+        #Line:
+        #    points:(0,100,200,200)
+        Line:
+            points:(0,0,200,200,300,400)
+            width:2
+        Line:
+            points:(0,500,500,500)
+
+<Graph_Lines>:
+    canvas:
+# Line X
+        Line:
+            points:(0,25,1300,25)
+        Line:
+            points:(0,50,1300,50)
+        Line:
+            points:(0,75,1300,75)
+        Line:
+            points:(0,100,1300,100)
+        Line:
+            points:(0,125,1300,125)
+        Line:
+            points:(0,150,1300,150)
+        Line:
+            points:(0,175,1300,175)
+        Line:
+            points:(325,325,1300,325)
+
+        Color:
+            rgba:(0,0,1,1)
+        Line:
+            points:(0,0,1000,1000)
+
+# Line Y
+        Color:
+            rgba:(1,1,1,1)
+        Line:
+            points:(25,0,25,1300)
+        Line:
+            points:(50,0,50,1300)
+        Line:
+            points:(75,0,75,1300)
+        Line:
+            points:(100,0,100,1300)
+        Line:
+            points:(125,0,125,1300)
+        Line:
+            points:(150,0,150,1300)
+        Line:
+            points:(175,0,175,1300)
+        Line:
+            points:(200,0,200,1300)
+        Line:
+            points:(225,0,225,1300)
+        Line:
+            points:(250,0,250,1300)
+        Line:
+            points:(275,0,275,1300)
+        Line:
+            points:(300,0,300,1300)
+        Line:
+            points:(325,0,325,1300)
+<New_Line>:
+    canvas:
+        Line:
+            points:(25,25,25,620, 25,620,1250,620, 1250,620,1250,25, 1250,25,25,25)
+        Line:
+            points:(50,50,50,600,  50,600,1225,600,  1225,600,1225,50,  1225,50,50,50)
+        Line:
+            points:(75,75,75,580)

@@ -16,7 +16,6 @@ MDFloatLayout:
         size_hint_y:.1
         size_hint_x:.5
         pos_hint:{'center_x':.5,'center_y':.4}
-        
 """
 
 class TextField(MDApp):
