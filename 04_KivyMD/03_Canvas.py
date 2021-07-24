@@ -5,6 +5,7 @@ from kivy.uix.widget import Widget
 from kivy.graphics import Line
 from kivy.graphics.vertex_instructions import Line
 from kivy.metrics import dp
+from kivy.properties import BooleanProperty,StringProperty
 
 
 class canvas_Rectangle(Widget):
@@ -30,6 +31,9 @@ class canvas_Example3(Widget):
     pass
 
 class Canvas_Example4(Widget):
+
+    is_enable=BooleanProperty(False)
+    tongle_text=StringProperty('OFF')
     def __init__(self,**kwargs):
         super(Canvas_Example4, self).__init__(**kwargs)
 
@@ -59,17 +63,42 @@ class Canvas_Example4(Widget):
         x, y = self.rec.pos
         w, h = self.rec.size
         inc=dp(10)
-        diff = self.height -(x+h)
+        diff = self.height -(y+h)
         if diff<inc:
             inc=diff
         y+=inc
         self.rec.pos=(x,y)
 
     def on_Button_Left(self):
-        pass
-
+        x,y=self.rec.pos
+        w,h=self.rec.size
+        inc=dp(10)
+        print(x,y,w,h,inc)
+        if x==0:
+            inc=x
+        else:
+            x-=10
+        self.rec.pos=(x,y)
     def on_Button_Down(self):
-        pass
+        x,y=self.rec.pos
+        w,h=self.rec.size
+        inc=dp(10)
+        if y==0:
+            inc=y
+        else:
+            y-=10
+        self.rec.pos=(x,y)
+    def tongle_Enable(self,widget):
+        #print(widget.state)
+        if widget.state=='normal':
+            self.is_enable=False
+            print(self.is_enable)
+            self.tongle_text='OFF'
+        else:
+            #print(self.is_enable)
+            self.is_enable=True
+            print(self.is_enable)
+            self.tongle_text='ON'
 
 class Touch(Widget):
 

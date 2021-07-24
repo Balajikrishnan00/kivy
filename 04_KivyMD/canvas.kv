@@ -166,21 +166,31 @@
         pos:dp(100),dp(100)
         size:50,50
         on_press:root.on_Button_Right()
+        disabled: not root.is_enable
     Button:
         text:'UP'
         pos:dp(50),dp(150)
         size:50,50
         on_press:root.on_Button_Up()
+        disabled: not root.is_enable
     Button:
         text:'LEFT'
         size:(50,50)
         pos:dp(0),dp(100)
         on_press:root.on_Button_Left()
+        disabled: not root.is_enable
     Button:
         text:'Down'
         size:(50,50)
         pos:dp(50),dp(50)
         on_press:root.on_Button_Down()
+        disabled: not root.is_enable
+    ToggleButton:
+        text:root.tongle_text
+        size:(50,50)
+        pos:dp(50),dp(100)
+        on_state:root.tongle_Enable(self)
+
     Label:
 
         text:str(root.width)
