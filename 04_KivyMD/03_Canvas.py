@@ -3,9 +3,10 @@ from kivy.graphics import Color
 from kivy.graphics import Rectangle
 from kivy.uix.widget import Widget
 from kivy.graphics import Line
-from kivy.graphics.vertex_instructions import Line
+from kivy.graphics.vertex_instructions import Line, Ellipse
 from kivy.metrics import dp
 from kivy.properties import BooleanProperty,StringProperty
+from kivy.properties import Clock
 
 
 class canvas_Rectangle(Widget):
@@ -124,10 +125,41 @@ class Touch(Widget):
         self.rectangle.pos=touch.pos
         # self.line.points=touch.pos
 
+class ball_Amination(Widget):
+    def __init__(self,**kwargs):
+        super(ball_Amination, self).__init__(**kwargs)
+        with self.canvas:
+            self.ball=Ellipse(pos=(self.center),size=(50,50))
 
+class canvas_Example6(Widget):
+    def __init__(self,**kwargs):
+        super(canvas_Example6, self).__init__(**kwargs)
+        with self.canvas:
+            self.rectangle=Rectangle(pos=(100,100),size=(100,100))
+
+    def moveR(self):
+        x,y=self.rectangle.pos
+        w,h=self.rectangle.size
+        x1=self.width-w
+        m=10
+        if x==x1:
+            print(x,x1)
+        else:
+            x+=m
+            print(x,x1)
+        self.rectangle.pos=(x,y)
+    def moveU(self):
+        x,y=self.rectangle.pos
+        w,h=self.rectangle.size
+        y1=self.height-h
+        if y==y1 and x==y1:
+            print(y,y1)
+        else:
+            m=10
+            y+=m
+        self.rectangle.pos=(x,y)
 class canvasApp(App):
     def build(self):
-        return Canvas_Example4()
-
+        return canvas_Example6()
 
 canvasApp().run()
